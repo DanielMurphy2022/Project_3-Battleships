@@ -35,3 +35,15 @@ class Board:
                         self.grid[row+i][col] = 'S'  # Place the ship on the grid
                     self.ships.append((row, col, 'vertical', ship))  # Add ship information to the list
                     break
+
+def print_hidden(self):
+        print("  " + " ".join(str(i) for i in range(self.size)))  # Print column numbers
+        for i in range(self.size):
+            print("{} {}".format(i, " ".join(self.grid[i])))  # Print each row of the grid
+
+def print_board(self):
+        print("  " + " ".join(str(i) for i in range(self.size)))  # Print column numbers
+        for i in range(self.size):
+            print("{} {}".format(i, " ".join('X' if cell == 'H' else cell for cell in self.grid[i])))  # Print each row of the grid, hiding ships' locations
+
+class BattleshipsGame:
