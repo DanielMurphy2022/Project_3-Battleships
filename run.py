@@ -48,3 +48,17 @@ class Board:
 
 
 class BattleshipsGame:
+    def __init__(self):
+        self.size = 0
+        self.board = None
+        self.player_board = None
+        self.computer_board = None
+
+    def setup(self):
+        self.size = int(input("Enter the grid size: "))  # Get grid size from user input
+        self.board = Board(self.size)  # Initialize game boards
+        self.player_board = Board(self.size)
+        self.computer_board = Board(self.size)
+        ships = [Ship(5), Ship(4), Ship(3), Ship(3), Ship(2)]  # Create ships of different sizes
+        for ship in ships:
+            self.board.place_ship(ship)  # Place ships on the game board
