@@ -101,3 +101,31 @@ class BattleshipsGame:
                 break
             except ValueError:
                 print("Please enter a valid number.")  # Handle invalid input
+
+    def computer_turn(self):
+        print("Computer's Turn!")
+        while True:
+            guess_row = random.randint(0, self.size - 1)
+            guess_col = random.randint(0, self.size - 1)
+            if self.player_board.grid[guess_row][guess_col] == 'X' or self.player_board.grid[guess_row][guess_col] == 'H':
+                continue
+            if self.player_board.grid[guess_row][guess_col] == 'S':
+                print("The computer hit one of your ships!")  # Check if computer's guess hit a ship
+                self.player_board.grid[guess_row][guess_col] = 'H'
+                for row, col, direction, ship in self.player_board.ships:
+                    if direction == 'horizontal':
+                        if row == guess_row and col <= guess_col < col + ship.size:
+                            ship.hits += 1
+                            if ship.is_sunk():
+                                print("The computer sunk one of your ships!")  # Check if a ship has been sunk
+                            break
+                    else:
+                        if col == guess_col and row <= guess_row < row + ship.size:
+                            ship.hits += 1
+                            if ship.is_sunk():
+                                print("The computer sunk one of your ships!")  # Check if a ship has been sunk
+                            break
+            else:
+                print("The computer missed!")  # Computer missed the ship
+                self.player_board.grid[guess_row][guess_col] = 'X'
+            break
