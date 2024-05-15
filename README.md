@@ -13,7 +13,7 @@ A console-based implementation of the classic Battleships game in Python, featur
 
 ### Prerequisites
 
-- Python 3.x
+- Python 
 
 ### Installation
 
