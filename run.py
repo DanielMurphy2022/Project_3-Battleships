@@ -129,3 +129,10 @@ class BattleshipsGame:
                 print("The computer missed!")  # Computer missed the ship
                 self.player_board.grid[guess_row][guess_col] = 'X'
             break
+
+    def play(self):
+        self.setup()  # Setup the game
+        while True:
+            self.player_turn()  # Player's turn
+            if all(ship.is_sunk() for _, _, _, ship in self.computer_board.ships):
+                print("Congratulations! You won!")  # Player wins if all computer's ships are sunk

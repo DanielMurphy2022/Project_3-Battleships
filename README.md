@@ -1,32 +1,36 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships Game
 
-Welcome,
+A console-based implementation of the classic Battleships game in Python, featuring a player-versus-computer mode. Players take turns guessing coordinates to attack each other's ships until one side wins.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Features
 
-## Reminders
+- Customizable grid size: Players can choose the size of the game grid.
+- Multiple ships: The game includes ships of different sizes for added challenge.
+- Intelligent computer opponent: The computer opponent strategically selects coordinates to attack.
+- Error handling: The game handles invalid inputs gracefully and prompts the player to try again.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Getting Started
 
-## Creating the Heroku app
+### Prerequisites
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- Python 3.x
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Installation
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+1. Clone the repository: https://github.com/DanielMurphy2022/Project_3-Battleships
+Navigate to the project directory:
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Running the Game
 
-Connect your GitHub repository and deploy as normal.
+Run the following command to start the game:
+Follow the on-screen prompts to play the game.
 
-## Constraints
+## Gameplay
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+1. Enter the grid size when prompted.
+2. Take turns guessing coordinates to attack the opponent's ships.
+3. If a guess hits a ship, the opponent's board will be updated accordingly.
+4. The game continues until all of the opponent's ships are sunk.
 
----
-
-Happy coding!
+## Acknowledgments
+I had a similiar project with a hangman game in college, I got my lecturer in Object Orientated programming to check my code while I was doing this and it all checked out fine.
