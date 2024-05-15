@@ -1,3 +1,9 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random
+
+class Ship:
+    def __init__(self, size):
+        self.size = size
+        self.hits = 0
+
+    def is_sunk(self):
+        return self.hits == self.size
